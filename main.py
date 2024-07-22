@@ -87,17 +87,50 @@ def generate_readme(prompt, code):
     """
     try:
         prompt_template = f"""
-        I am creating a README file for my project, which is an expense tracker application.
-        Below is the code for the project.
-        Please generate the content for each section based on the code provided:
-        
-        1. Project Title and Description
-        2. Features
-        3. Installation Instructions
-        4. Usage Instructions
-        5. Contributing Guidelines
-        6. License Information
-        7. Contact Information
+        Generate a detailed README file for a GitHub repository. The README should include the following sections:
+
+    Project Title
+
+    Provide the name of the project.
+    Project Description
+
+    Write a brief description of what the project does and its purpose.
+    Table of Contents
+
+    List the sections of the README for easy navigation.
+    Installation Instructions
+
+    Detail the steps required to install and set up the project locally, including dependencies and any setup instructions.
+    Usage
+
+    Provide code examples or instructions on how to use the project. Include sample commands or scripts.
+    Configuration
+
+    Explain any configuration options or settings that need to be adjusted. Mention environment variables or configuration files.
+    Features
+
+    List the main features of the project. Use bullet points or a numbered list.
+    Contributing
+
+    Outline guidelines for contributing to the project, including how to fork the repository, submit pull requests, and coding standards.
+    Tests
+
+    Describe how to run tests for the project. Include any test commands or scripts.
+    License
+
+    Specify the license under which the project is distributed. Mention any relevant licenses, if applicable.
+    Contact Information
+
+    Provide details on how to contact the project maintainers or contributors. Include email addresses, links to social media, or GitHub profiles.
+    Acknowledgments
+
+    Acknowledge any contributors, libraries, or resources that were used in the development of the project.
+    Example Context for the Prompt:
+
+    Project Title: "Expense Tracker App"
+    Description: "An application to track and manage personal expenses, including features like budget planning and transaction categorization."
+    Features: "User authentication, transaction history, budget planning, data visualization, multi-currency support."
+    Ensure the README is formatted properly with headings, code blocks, and links where appropriate. The goal is to make the documentation user-friendly and comprehensive."
 
         Here is the code:
         {code}
@@ -169,6 +202,7 @@ if show_buttons:
             mime="text/markdown",
             key="download-readme"
         )
+
     # with col2:
     #     # Copy to clipboard functionality using JavaScript
     #     st.markdown("""
